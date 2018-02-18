@@ -1,0 +1,20 @@
+FROM alpine:3.1
+
+#update
+RUN apk add --update python py-pip
+
+#Install all dependencies
+RUN pip install logging
+RUN pip install datetime
+RUN pip install BeautifulSoup4
+RUN pip install requests
+RUN pip install glob
+RUN pip install pandas
+RUN pip install glob
+RUN pip install BytesIO
+
+#Bundle app source
+COPY Problem_2.py /src/Problem_2.py 
+
+EXPOSE 8000
+CMD ["python", "/src/Problem_2.py", "-p 8000"]
