@@ -7,6 +7,7 @@ Instructions:
 flow chart and also submit fully functional code through github.
 • Deadline: 03/16/2018 11.59 PM. Late submissions lose 10% points per day.
 • All teams will present their work on 03/17/2018. Each team gets 10 minutes to present
+
 Summary:
 As interest in IOT and sensors pick up steam, companies are trying to build algorithms and systems to
 understand consumer behavior to help them make better decisions. One such application is energy
@@ -23,11 +24,15 @@ like temperature and humidity, a machine learning model could be used to predict
 Your team has been hired to conduct an in-depth analysis and provide insights on feature engineering
 and machine learning. AdaptiveAlgo only uses Python so your solution should be in Python. Each part
 should be a jupyter notebook
+
+
 Part 1: Research
 Review the following papers and provide a jupyter notebook for each paper.
 A. https://www.sciencedirect.com/science/article/pii/S0378778816308970?via%3Dihub
 B. https://www.sciencedirect.com/science/article/pii/S1364032116307420
 C. https://www.sciencedirect.com/science/article/pii/S0360544212002903
+
+
 Part 2: Exploratory Data Analysis
 Preparation: Review the EDA tutorial here:
 1. Video: https://www.youtube.com/watch?v=W5WE9Db2RLU
@@ -36,7 +41,8 @@ Data for assignment: https://github.com/LuisM78/Appliances-energy-prediction-dat
 • Conduct an exploratory data analysis using Python packages (plotly, seaborn, matplotlib etc.) to
 understand the dataset.
 • Put together a PowerPoint report with graphs and key insights garnered from this analysis.
-Cannot be used without written permission from QuantUniversity LLC. Copyright: 2018 QuantUniversity LLC.
+
+
 Part 3: Feature engineering
 Preparation:
 https://jakevdp.github.io/PythonDataScienceHandbook/05.04-feature-engineering.html (1)
@@ -44,11 +50,15 @@ There are many features in the dataset. Which features are important? Do we need
 transformations? Is the data clean or are there problems that need to be addressed? Conduct a
 thorough feature analysis and use pre-processing techniques (1) that needs to be done to make the data
 usable. Use Python for this.
+
+
 Part 4: Prediction algorithms
 Try out Linear regression, Random forest, Neural networks to build prediction models in Python using
 sklearn. Compute RMS, MAPE, R2 and MAE for Training and Testing datasets. Which model would you
 recommend? Refer to Paper A for guidance on building models. (Note: The github has sample R code.
 You can refer to and implement “similar” models
+
+
 Part 5: Feature Selection
 Preparation:
 http://scikit-learn.org/stable/modules/feature_selection.html#feature-selection (2)
@@ -59,6 +69,8 @@ quantify feature importance? How do you rank important features? Which features 
 and why? Also try Exhaustive search, Forward search and Backward search for regression models
 AdaptiveAlgo is curious about tpot, featuretools(https://www.featuretools.com/demos ), Boruta,
 tsfresh. Use these packages and compare and contrast feature engineering in each approach.
+
+
 Part 6: Model Validation and Selection
 Preparation:
 https://jakevdp.github.io/PythonDataScienceHandbook/05.03-hyperparameters-and-modelvalidation.html
@@ -72,12 +84,15 @@ In addition, AdaptiveAlgo is intrigued by
 • regularization (L1, L2, Elastic net)
 • grid search options.
 Illustrate all these in the context of model validation and selection.
-Cannot be used without written permission from QuantUniversity LLC. Copyright: 2018 QuantUniversity LLC.
+
+
 Part 7: Final pipeline
 Which model would you finally recommend and why?
 Create a pipeline See (Feature selection as part of a pipeline in http://scikitlearn.org/stable/modules/feature_selection.html
 ) on how to automate the entire model from data
 ingestion to final model prediction
+
+
 Part 8: Report and Model development methodology*
 • Put together a comprehensive report discussing your analysis in pdf.
 • AdaptiveAlgo wants to see the whole project implemented as jupyter notebooks. Create jupyter
