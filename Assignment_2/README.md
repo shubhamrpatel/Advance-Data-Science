@@ -1,14 +1,17 @@
 
-Case: Machine learning with Energy datasets
-Instructions:
+## Case: Machine learning with Energy datasets
+
+Instructions: 
+
 • You should use Python work on this case.
+
 • No sharing of work. You can work in your teams only
 • You are expected to submit a report that summarizes the key steps in your implementation as a
 flow chart and also submit fully functional code through github.
 • Deadline: 03/16/2018 11.59 PM. Late submissions lose 10% points per day.
 • All teams will present their work on 03/17/2018. Each team gets 10 minutes to present
 
-Summary:
+## Summary:
 As interest in IOT and sensors pick up steam, companies are trying to build algorithms and systems to
 understand consumer behavior to help them make better decisions. One such application is energy
 modeling. Though, most consumers are aware of their aggregate consumption of energy, few are aware
