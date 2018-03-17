@@ -1,4 +1,4 @@
-Cannot be used without written permission from QuantUniversity LLC. Copyright: 2018 QuantUniversity LLC.
+
 Case: Machine learning with Energy datasets
 Instructions:
 • You should use Python work on this case.
