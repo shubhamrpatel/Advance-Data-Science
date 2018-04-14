@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Upload</title>
+</head>
+<body>
+    <h1>AWS Form</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.b1.label }} :
+            {{ form.b1(size=32) }}
+        </p>
+        <p>
+            {{ form.b2.label }} :
+            {{ form.b2(size=32) }}
+        </p>
+        <p>
+            {{ form.b3.label }} :
+            {{ form.b3(size=32) }}
+        </p>
+        <p>
+            {{ form.b4.label }} :
+            {{ form.b4(size=32) }}
+        </p>
+        <p>
+            {{ form.b5.label }} : 
+            {{ form.b5(size=32) }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+</body>
+</html>
