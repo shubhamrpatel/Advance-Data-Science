@@ -24,8 +24,8 @@ app.config['SECRET_KEY'] = 'abcdefghijkl'
 configure_uploads(app, photos)
 #s3 = boto3.client( "s3", aws_access_key_id= AWS_ACCESS_KEY_ID , aws_secret_access_key = AWS_SECRET_ACCESS_KEY)
 
-AWS_ACCESS_KEY_ID = 'AKIAIKIT6JCV24OR6WPA'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = 
+AWS_SECRET_ACCESS_KEY = 
 END_POINT = 'us-east-1'                          # eg. us-east-1
 S3_HOST = 's3.us-east-1.amazonaws.com'                            # eg. s3.us-east-1.amazonaws.com
 BUCKET_NAME = 'polishbank'
