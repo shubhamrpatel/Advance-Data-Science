@@ -28,6 +28,12 @@ https://www.kaggle.com/mirichoi0218/insurance/data
 - Cloud Tool: AWS(Amazon Web Service) EC2/S3
 
 
+### The Files Description:
+- Flask- The folder consists of the app.py file and the templates file
+- EDA.ipynb - The file consist of Exploratory Data Analysis done on the dataset
+- FeatureEngineering.ipynb - The file consist of feature engineering performed on the region column 
+- RegressionModel.ipynb - The file consist of regression models performed on the complete dataset
+
 
 ## Progress Report:
 ### Week 1:
