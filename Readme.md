@@ -1,2 +1,2 @@
 ## INFO 7390 Advance DataScience and Architecture
-The repository consists of all the assignmnet and final project we have done in Spring2018 semester at Northeastern University under professor <Bold>Srikanth Krishnamurthy</>.
+The repository consists of all the assignmnet and final project we have done in Spring2018 semester at Northeastern University under professor Srikanth Krishnamurthy.
