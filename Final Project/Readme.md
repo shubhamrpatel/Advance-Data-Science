@@ -4,6 +4,20 @@ This is the final project of INFO7390. The topic is Insurance Premium Prediction
 ### Our Goal for this project:
 - Accurately predict the insurance premium cost for a person knowing all the factors (like smoker or not, no. of children, regin, etc.)
 
+### The dataset can be found on:
+https://www.kaggle.com/mirichoi0218/insurance/data
+
+### The dataset consists of:
+#### Columns -
+- age: age of primary beneficiary
+- sex: insurance contractor gender, female, male
+- bmi: Body mass index, providing an understanding of body, weights that are relatively high or low relative to height, objective index of body weight (kg / m ^ 2) using the ratio of height to weight, ideally 18.5 to 24.9
+- children: Number of children covered by health insurance / Number of dependents
+- smoker: Smoking
+- region: the beneficiary's residential area in the US, northeast, southeast, southwest, northwest.
+- charges: Individual medical costs billed by health insurance
+
+
 ### Week 1:
 - Analysed the dataset 
 - Decided the number of algorithms
