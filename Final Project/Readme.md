@@ -8,4 +8,12 @@
 - Completed the EDA
 - Flask Application
 - Feature Engineering 
+- Regression model metrics
+
+## Plan for next week:
+- Parameter Tuning for Machine Learning
+- Dockerize Flask application
+- Pickling model and upload on S3
+- Deployment on AWS Cloud
+- Report
 
