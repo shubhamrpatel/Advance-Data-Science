@@ -1,4 +1,4 @@
-## Final Project- Insurance Premium Prediction 
+# Final Project- Insurance Premium Prediction 
 This is the final project of INFO7390. The topic is Insurance Premium Prediction with available risk factors.
 
 ### Our Goal for this project:
@@ -18,6 +18,8 @@ https://www.kaggle.com/mirichoi0218/insurance/data
 - charges: Individual medical costs billed by health insurance
 
 
+## Progress Report:
+
 ### Week 1:
 - Analysed the dataset 
 - Decided the number of algorithms
@@ -35,4 +37,3 @@ https://www.kaggle.com/mirichoi0218/insurance/data
 - Pickling model and upload on S3
 - Deployment on AWS Cloud
 - Report
-
