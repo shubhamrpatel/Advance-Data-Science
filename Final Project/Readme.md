@@ -1,11 +1,14 @@
 # Final Project- Insurance Premium Prediction 
 This is the final project of INFO7390. The topic is Insurance Premium Prediction with available risk factors.
 
+
 ### Our Goal for this project:
 - Accurately predict the insurance premium cost for a person knowing all the factors (like smoker or not, no. of children, regin, etc.)
 
+
 ### The dataset can be found on:
 https://www.kaggle.com/mirichoi0218/insurance/data
+
 
 ### The dataset consists of:
 #### Columns -
@@ -18,8 +21,15 @@ https://www.kaggle.com/mirichoi0218/insurance/data
 - charges: Individual medical costs billed by health insurance
 
 
-## Progress Report:
+### Deployment details:
+- Languages: Python
+- Pipeline: Luigi/skLearn
+- Container: Docker
+- Cloud Tool: AWS(Amazon Web Service) EC2/S3
 
+
+
+## Progress Report:
 ### Week 1:
 - Analysed the dataset 
 - Decided the number of algorithms
