@@ -37,14 +37,14 @@ https://www.kaggle.com/mirichoi0218/insurance/data
 
 ## Progress Report:
 ### Week 1:
-- Analysed the dataset 
-- Decided the number of algorithms
-- Performed missing value analysis and EDA
+- Analysed the dataset - Understood the dependances of the factors on our prediction of the final result 
+- Decided the number of algorithms - Random forest, Linear Regression, Neutral networks
+- Data Cleaning - No missing values were found
 
 ### Week 2:
 - Completed the EDA
-- Flask Application
-- Feature Engineering 
+- Flask Application 
+- Feature Engineering - Performed feature engineering on the regin column  
 - Regression model metrics
 
 ### Plan for next week:
