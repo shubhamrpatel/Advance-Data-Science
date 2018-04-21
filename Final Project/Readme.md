@@ -1,7 +1,7 @@
 ## Final Project- Insurance Premium Prediction 
 This is the final project of INFO7390. The topic is Insurance Premium Prediction with available risk factors.
 
-### Our Goal is to:
+### Our Goal for this project:
 - Accurately predict the insurance premium cost for a person knowing all the factors (like smoker or not, no. of children, regin, etc.)
 
 ### Week 1:
@@ -15,7 +15,7 @@ This is the final project of INFO7390. The topic is Insurance Premium Prediction
 - Feature Engineering 
 - Regression model metrics
 
-## Plan for next week:
+### Plan for next week:
 - Parameter Tuning for Machine Learning
 - Dockerize Flask application
 - Pickling model and upload on S3
