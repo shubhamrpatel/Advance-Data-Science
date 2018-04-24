@@ -53,3 +53,7 @@ https://www.kaggle.com/mirichoi0218/insurance/data
 - Pickling model and upload on S3
 - Deployment on AWS Cloud
 - Report
+
+### References
+-https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm
+-https://www.kaggle.com/mirichoi0218/insurance
