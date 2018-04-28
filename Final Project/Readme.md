@@ -62,8 +62,7 @@ https://www.kaggle.com/mirichoi0218/insurance/data
 - Report
 
 ### References
--https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm
--https://www.kaggle.com/mirichoi0218/insurance
--https://www.youtube.com/watch?v=X3Q6JFl8vjA
+- Refered for obesity - https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm
+- refered for Kmeans - https://www.youtube.com/watch?v=X3Q6JFl8vjA
 -http://materializecss.com/
 -https://www.datasciencebytes.com/bytes/2015/02/24/running-a-flask-app-on-aws-ec2/
