@@ -1,6 +1,7 @@
 # Final Project- Insurance Premium Prediction 
 This is the final project of INFO7390. The topic is Insurance Premium Prediction with available risk factors.
 
+## http://ec2-52-91-72-142.compute-1.amazonaws.com/
 
 ### Our Goal for this project:
 - Accurately predict the insurance premium cost for a person knowing all the factors (like smoker or not, no. of children, regin, etc.)
@@ -33,6 +34,9 @@ https://www.kaggle.com/mirichoi0218/insurance/data
 - EDA.ipynb - The file consist of Exploratory Data Analysis done on the dataset
 - FeatureEngineering.ipynb - The file consist of feature engineering performed on the region column 
 - RegressionModel.ipynb - The file consist of regression models performed on the complete dataset
+- kmeans_sklearn.ipnyb - Implementing kmeans algorithm to categorise data into clusters for classifying insurance premiums
+- model_pickle.ipnyb - Fitting the models and generating pickled files
+- insurance_pipeline.ipnyb - Analyzing various regression models for determining suitable models for prediction
 
 
 ## Progress Report:
