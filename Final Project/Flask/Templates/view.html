@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <title>We Predict</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+</head>
+<body> 
+      <a href="/getCSV/" target="blank">
+         <button class='btn btn-default' style="margin-left:20px;margin-top:20px">Download-File
+                     <span class="glyphicon glyphicon-download-alt"></span></button></a>
+      {% block content %}   
+        <!--<h1>{{name}}</h1>
+        {{ table|safe }}-->
+        <!--<div class="table-responsive">
+            <table class="table table-striped">
+                <tbody>
+                       {%for i,j in titles,tables %}
+                            <h1>{{i}}</h1>
+                             {{ j|safe }}
+                       {%endfor%}
+                 </tbody>
+             </table>
+        </div>-->
+	  <h1>{{titles[0]}}</h1>
+	  {{ tables[0]|safe }}
+	  <h1>{{titles[1]}}</h1>
+	  {{ tables[1]|safe }}
+        <!--{%if ctrsuccess %}
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <tbody>
+                    {%for ctrrow in ctrsuccess %}
+                    <tr>
+                        <td>{{ ctrrow['positionint'] }}</td>
+                    </tr>
+		    {{ ctrrow|safe }}
+                    {%endfor%}
+                </tbody>
+            </table>
+        </div>
+        {%endif%}-->
+      {% endblock %}
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,144 +1,146 @@
-from flask import Flask, render_template, request
-from flask.ext.uploads import UploadSet, configure_uploads, DATA
-#import app
-import forms as fm
+import os, zipfile
+from flask import Flask, render_template, flash, request, url_for, redirect, Response, send_file
+from functions import credentials, read_file,model_run,zip_file,unzip_file,form_output
+from os import remove,path
+from werkzeug.utils import secure_filename
 import json
-import os
-import boto
-import boto3
-import boto.s3
-from boto.s3.connection import S3Connection
-from boto3.s3.transfer import S3Transfer
-from boto.s3.key import Key
-import time
+import pandas as pd
+import sys
 
-
+#ak=sys.argv[1]
+#sak=sys.argv[2]
 
 app = Flask(__name__)
+app.config['UPLOAD_FOLDER']='Data'
+# set as part of the config
+SECRET_KEY = 'many random bytes'
+app.config['S3']=''
+# or set directly on the app
+app.secret_key = 'many random bytes'
+@app.route('/')
+def homepage():
+    return render_template("main.html")
 
-photos = UploadSet('photos', DATA)
-PATH = 'static/csv/data/data99.json'
+#@app.route('/login/')
+#def login():
+#    return render_template("dashboard.html")
 
-app.config['UPLOADED_PHOTOS_DEST'] = 'static/csv/data'
-app.config['SECRET_KEY'] = 'abcdefghijkl'
-configure_uploads(app, photos)
-#s3 = boto3.client( "s3", aws_access_key_id= AWS_ACCESS_KEY_ID , aws_secret_access_key = AWS_SECRET_ACCESS_KEY)
+@app.route('/dashboard/', methods=["GET","POST"])
+def dashboard():
+    print("Authenticating User...")
+    error = ''
+    try:
+        if request.method == "POST":
+            attempted_username = request.form['username']
+            attempted_password = request.form['password']
+            #flash(attempted_username)
+            #flash(attempted_password)
+            credt=credentials()
+            lst=credt[attempted_username]
+            if attempted_username in credt and lst[0]==attempted_password:
+            #if attempted_username == "admin" and attempted_password == "password":
+                print("sucess!!!!")
+                #return render_template("dashboard.html")
+                #return redirect(url_for('login'))
+                return render_template("dashboard.html")
+            else:
+                error = "Invalid credentials. Try Again."
+                print(error)
+                flash(error)
+        return render_template("main.html", error = error)
+    except Exception as e:
+        #flash(e)
+        print(e)
+        return render_template("main.html", error = error)
 
-AWS_ACCESS_KEY_ID = 
-AWS_SECRET_ACCESS_KEY = 
-END_POINT = 'us-east-1'                          # eg. us-east-1
-S3_HOST = 's3.us-east-1.amazonaws.com'                            # eg. s3.us-east-1.amazonaws.com
-BUCKET_NAME = 'polishbank'
-FILENAME = 'data.json'    
-PATH_FILE = 'static/csv/'              
-UPLOADED_FILENAME = 'data12.json'
-FILE_NAME =  'static/csv/data/data12.json'
-s3 = boto3.client( "s3", aws_access_key_id= AWS_ACCESS_KEY_ID , aws_secret_access_key = AWS_SECRET_ACCESS_KEY)
-# include folders in file path. If it doesn't exist, it will be created
+@app.route('/upload/', methods=['GET','POST'])
+def upload_file():
+    print("Uploading CSV... ")
+    error = ''
+#    os.remove('Output.zip')
+    try:
+        if request.method == 'POST':
+           f=request.files['file']
+           f.save(secure_filename(f.filename))
+           df=read_file(f.filename)
+           df_out=model_run(df)
+           print("Out from model_run")
+           #df.to_csv('predictoutput.zip',sep=',',index=False)
+           #os.remove(f.filename)
+           #return render_template("view.html",tables=[df1.to_html()], titles = ['Predicted O/P'])
+           return render_template("formout.html",tables=[df, df_out], titles = ['Inputs Given','O/p Predicted by different Models'])
+           #return render_template("view.html",name='Predicted O/P', tables=[df_summ.to_html(),df1.to_html()], titles = ['Error Metrics','Predicted O/P'])
+           #jsonfiles = json.loads(df.head().to_json(orient='records'))
+           #return render_template('view.html', ctrsuccess=jsonfiles)
+           #tables=[df.to_html(classes='dataframe')], titles = ['na', 'Predicted O/P'])
+           #flash("File uploaded")
+        error = "File Not uploaded"
+        return render_template("dashboard.html", error = error)
+    except Exception as e:
+        #flash(e)
+        print(e)
+        return render_template("dashboard.html", error = error)
 
-#s3 = boto.s3.connect_to_region(END_POINT, aws_access_key_id=AWS_ACCESS_KEY_ID,
- #                          aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
- #                          host=  S3_HOST)
+@app.route('/forminput/', methods=['GET','POST'])
+def form_input():
+    print("Form submitted...")
+    error = ''
+    try:
+        if request.method == 'POST':
+            print("Inside Post!")
+            age=request.form['age']
+            print(age)
+            bmi=request.form['bmi']
+            print(bmi)
+            children=request.form['children']
+            print(children)
+            sex=request.form['sex']
+            print(sex)
+            smoker=request.form['smoker']
+            print(smoker)
+            region=request.form['region']
+            print(region)
+            df =  pd.DataFrame({'age' : [age], 'sex' : [sex], 'bmi' : [bmi], 'children' : [children], 'smoker' : [smoker], 'region' :[region]})
+            print("DataFrame created!!!")
+            #df=pd.DataFrame(x)
+            df,df_out= form_output(df)
+            # print("Check: {}.".format(df.to_html()))
+            # print(df_out.to_html())
+            print("Yo mama!!")
+            print(df_out)
+            print("Populating Table...")
+            return render_template("formout.html",tables=[df, df_out], titles = ['Inputs Given','O/p Predicted by different Models'])
+        error= " Invalid Inputs"
+        return render_template("dashboard.html", error = error)
+    except Exception as e:
+        #flash(e)
+        print(e)
+        return render_template("dashboard.html", error = error)
 
-#bucket = boto.s3.get_bucket(BUCKET_NAME)
-#k = Key(bucket)
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template("404.html")
 
-#k.key = UPLOADED_FILENAME
-#key = Key(PATH)
-#key.set_contents_from_file('/tmp/hello.txt')
+@app.route('/getCSV/')
+def getCSV():
+    try:
+        file_path=os.path.join(app.root_path,'Output.zip')
+        #rchive = zipfile.ZipFile('Output.zip', 'r')
+        return send_file(file_path, attachment_filename='predictedoutpt.zip',as_attachment=True)
+        #return Response(archive,mimetype="application/zip",headers={"Content-disposition":"attachment; filename=Output.zip"})
+    except Exception as e:
+        return str(e)
 
+@app.route('/predictoutput/', methods=['POST'])
+def PredictOutput():
+    #return request.data
+    data = request.get_json(force=True)
+    df = pd.io.json.json_normalize(data)
+    print(df)
+    js=json.loads(df.head().to_json(orient='records'))
+    resp = Response(json.dumps(data), status=200, mimetype='application/json')
+    #resp.headers['Link'] = 'http://luisrei.com'
+    return resp
 
-@app.route('/upload', methods=['GET', 'POST'])
-def upload():
-	if request.method == "POST":
-		print(request.files['user_file'])
-		df = pd.read_csv(request.files['user_file'])
-
-		data = df
-
-		resultindex = request.form['resultindex']
-		resultindex = int(resultindex)
-
-		conn = S3Connection(AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY)
-		# Connecting to specified bucket
-		b = conn.get_bucket(BUCKET_NAME)
-		#Initializing Key
-		k = Key(b)
-		i = 'Output.txt'
-		k.key = i
-		k.set_contents_from_filename(i)
-		k.set_acl('public-read')
-
-
-	return render_template('upload.html')	
-
-
-
-    # if request.method == 'POST' and 'photo' in request.files:
-    #     filename = photos.save(request.files['photo'])
-    #     return filename
-    # return render_template('upload.html')
-
-# ...
-def upload_to_s3(file, bucket_name , acl = "public-read"):
-	try:
-		s3.upload_fileobj( file , bucket_name , file)
-	except Exception as e:
-		return e
-
-@app.route('/awsform', methods=['GET', 'POST'])
-def awsform():
-    form = fm.AwsForm()
-    if form.validate_on_submit():
-        
-        #print(form.b1.data)
-        # CREATE JSON FILE
-        data = {}  
-        data['values'] = []
-        data['values'].append({
-        	'b1': form.b1.data,
-		    'b2': form.b2.data,
-		    'b3': form.b3.data,
-		    'b4': form.b4.data,
-		    'b5': form.b5.data
-        	})
-        with open(PATH, 'w') as outfile:
-        	json.dump(data, outfile)
-        	time.sleep(5)
-
-        	if os.path.isfile(PATH) and os.access(PATH, os.R_OK):
-		        # PUSH FILE TO S3
-		        try:
-		        	
-		        	output = upload_to_s3(FILE_NAME , BUCKET_NAME)	
-		        	#key.set_contents_from_file(PATH)
-		        	#boto.s3.Object(BUCKET_NAME, PATH).put(Body=open(PATH, 'rb'))
-		        	#file = open(PATH, 'r+')
-		        	#key = file.name
-		        	#bucket = BUCKET_NAME
-		        	#if upload_to_s3(AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, file, bucket, key):
-		        	#	print('It worked!')
-		        	#k.set_contents_from_filename(PATH)
-		        	#with open(PATH_FILE) as f:
-		        	#	key.send_file(f)
-		        	#start_s3_upload_process()
-		        	#k.set_contents_from_filename(key_name)
-		        	#k.set_contents_from_filename(PATH)
-		        	#file = open(PATH, 'r+')
-		        	#key = file.name
-		        	#transfer.upload_file(file, BUCKET_NAME, UPLOADED_FILENAME)
-		        	#if upload_to_s3(AWS_ACCESS_KEY, AWS_ACCESS_SECRET_KEY, PATH, BUCKET_NAME, key):
-		        	#	print('worked')
-		        except (Exception):
-		        	print(Exception)
-		        #f = open(PATH,'rb')
-				#conn.upload(PATH,f,'my_bucket')
-
-
-        return (form.b1.data)
-
-        #return redirect('/index')
-    return render_template('aws.html', title='Submit', form=form)
-
-if __name__ == '__main__':
-	app.run(debug=True)
+if __name__ == "__main__":
+    app.run()

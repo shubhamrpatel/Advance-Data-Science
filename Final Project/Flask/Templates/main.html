@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>Insurance Prediction</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+<body>
+
+  <nav>
+    <div class="nav-wrapper">
+      <label class="brand-logo">Insurance Prediction ML Application</a>
+    </div>
+  </nav>
+
+  <div class="row">
+      <form class="col s12" action="/dashboard/" method="POST">
+
+        <div class="row">
+          <div class="input-field col s6">
+            <div>
+            <label for="first_name">Username</label>
+            </div>
+            <input id="username" type="text" class="validate" name="username" value="{{request.form.username}}">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6">
+            <div>
+            <label for="password">Password</label>
+            </div>
+            <input id="password" type="password" class="validate" name="password" value="{{request.form.password}}">
+          </div>
+        </div>
+
+        <button type="submit" class="waves-effect waves-light btn">
+  		  	 Sign in
+        </button>
+
+      </form>
+    </div>
+
+</body>
+</html>

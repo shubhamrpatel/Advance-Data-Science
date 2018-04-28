@@ -1,5 +1,0 @@
-XSym
-0052
-3e2eefbf4828d1e406ad779fc11e1956
-/Applications/anaconda3/lib/python3.6/sre_compile.py
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           

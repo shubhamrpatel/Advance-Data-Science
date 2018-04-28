@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Insurance Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+</head>
+
+<body >
+
+    <nav>
+      <div class="nav-wrapper">
+        <label class="brand-logo">Insurance Prediction</label>
+        <ul id="nav-mobile" align = "right" class="right hide-on-med-and-down">
+       </ul>
+      </div>
+    </nav>
+
+
+
+
+    <div class="row">
+    <form action="/upload/" method="POST" enctype="multipart/form-data">
+        <div class="btn">
+            <input type="file" name="file"> </input>
+        </div>
+
+        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-cloud-upload"></span>Upload</button>
+
+    </form>
+   </div>
+
+    <div class="row">
+
+        <form class="col s12" action="/forminput/" method="POST">
+
+          <div class="row">
+            <div class="input-field col s4">
+              <div>
+              <label >Age</label>
+              </div>
+              <div>
+              <input id="age" type="text" class="validate" name="age" value="{{request.form.age}}">
+            </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s4">
+                <div>
+                <label>BMI</label>
+                </div>
+                <input id="bmi" type="text" class="validate" name="bmi" value="{{request.form.bmi}}">
+              </div>
+            </div>
+
+              <div class="input-field col s4">
+                <div>
+                <label>Children</label>
+                </div>
+                <input id="children" type="text" class="validate" name="children" value="{{request.form.children}}">
+              </div>
+          </div>
+
+
+
+          <div class="row">
+            <div class="input-field col s4">
+              <div>
+              <label >Sex</label>
+              </div>
+              <!-- <input id="password" type="password" class="validate" name="sex" value="{{request.form.sex}}"> -->
+              <select class="browser-default" name="sex" value="{{request.form.sex}}">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+              </select>
+            </div>
+
+            <div class="input-field col s4">
+              <div>
+              <label for="password">Smoker</label>
+              </div>
+              <!-- <input id="password" type="password" class="validate" name="smoker" value="{{request.form.smoker}}"> -->
+              <div>
+              <select class="browser-default" name="smoker" value="{{request.form.smoker}}">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="0">Yes</option>
+                <option value="1">No</option>
+              </select>
+            </div>
+            </div>
+
+            <div class="input-field col s4">
+              <div>
+              <label for="password">Region</label>
+              </div>
+              <!-- <input id="password" type="password" class="validate" name="region" value="{{request.form.region}}"> -->
+              <select class="browser-default" name="region" value="{{request.form.region}}">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">North-east</option>
+                <option value="2">North-west</option>
+                <option value="3">South-east</option>
+                <option value="4">South-west</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="waves-effect waves-light btn">
+    		  	 Submit
+          </button>
+
+        </form>
+      </div>
+</body>
+
+</html>
