@@ -2,6 +2,8 @@
 This is the final project of INFO7390. The topic is Insurance Premium Prediction with available risk factors.
 
 ## http://ec2-52-91-72-142.compute-1.amazonaws.com/
+## User name:: admin
+## Password:: password
 
 ### Our Goal for this project:
 - Accurately predict the insurance premium cost for a person knowing all the factors (like smoker or not, no. of children, regin, etc.)
@@ -37,6 +39,7 @@ https://www.kaggle.com/mirichoi0218/insurance/data
 - kmeans_sklearn.ipnyb - Implementing kmeans algorithm to categorise data into clusters for classifying insurance premiums
 - model_pickle.ipnyb - Fitting the models and generating pickled files
 - insurance_pipeline.ipnyb - Analyzing various regression models for determining suitable models for prediction
+- pipeline_sp.ipnyb - Final pipeline of models used using sklearn and generating error metrics.
 
 
 ## Progress Report:
@@ -61,3 +64,6 @@ https://www.kaggle.com/mirichoi0218/insurance/data
 ### References
 -https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm
 -https://www.kaggle.com/mirichoi0218/insurance
+-https://www.youtube.com/watch?v=X3Q6JFl8vjA
+-http://materializecss.com/
+-https://www.datasciencebytes.com/bytes/2015/02/24/running-a-flask-app-on-aws-ec2/
