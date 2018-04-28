@@ -62,7 +62,8 @@ https://www.kaggle.com/mirichoi0218/insurance/data
 - Report
 
 ### References
-- Refered for obesity - https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm
-- refered for Kmeans - https://www.youtube.com/watch?v=X3Q6JFl8vjA
+- Referred for obesity - https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm
+- referred for Kmeans - https://www.youtube.com/watch?v=X3Q6JFl8vjA
+- referred for EDA - https://www.kaggle.com/grosvenpaul/forecasting-and-eda-tutorial-for-beginners/notebook
 -http://materializecss.com/
 -https://www.datasciencebytes.com/bytes/2015/02/24/running-a-flask-app-on-aws-ec2/
