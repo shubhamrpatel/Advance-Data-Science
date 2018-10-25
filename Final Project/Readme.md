@@ -38,28 +38,10 @@ This is the final project of INFO7390. The topic is Insurance Premium Prediction
 - pipeline_sp.ipnyb - Final pipeline of models used using sklearn and generating error metrics.
 
 
-## Progress Report:
-### Week 1:
-- Analysed the dataset - Understood the dependances of the factors on our prediction of the final result 
-- Decided the number of algorithms - Random forest, Linear Regression, Neutral networks
-- Data Cleaning - No missing values were found
-
-### Week 2:
-- Completed the EDA
-- Flask Application 
-- Feature Engineering - Performed feature engineering on the regin column  
-- Regression model metrics
-
-### Plan for next week:
-- Parameter Tuning for Machine Learning
-- Dockerize Flask application
-- Pickling model and upload on S3
-- Deployment on AWS Cloud
-- Report
-
 ### References
 - Referred for obesity - https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm
 - referred for Kmeans - https://www.youtube.com/watch?v=X3Q6JFl8vjA
-- referred for EDA - https://www.kaggle.com/grosvenpaul/forecasting-and-eda-tutorial-for-beginners/notebook
--http://materializecss.com/
+- referred for EDA -http://materializecss.com/
 -https://www.datasciencebytes.com/bytes/2015/02/24/running-a-flask-app-on-aws-ec2/
+
+## The details of project flow can be found in FinalProjectReport,pdf
