@@ -8,8 +8,10 @@ Instructions:
 • No sharing of work. You can work in your teams only
 • You are expected to submit a report that summarizes the key steps in your implementation as a
 flow chart and also submit fully functional code through github.
-• Deadline: 03/16/2018 11.59 PM. Late submissions lose 10% points per day.
-• All teams will present their work on 03/17/2018. Each team gets 10 minutes to present
+•
+| This | is   |
+|------|------|
+|   a  | table|
 
 ## Summary:
 As interest in IOT and sensors pick up steam, companies are trying to build algorithms and systems to
