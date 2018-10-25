@@ -6,22 +6,22 @@ As interest in IOT and sensors pick up steam, companies are trying to build algo
 | Part | Description |
 |------|------|
 |   Part 1: Research Paper Review  | Review 3 papers and provide a Jupyter Notebook for each paper|
-|------|------|
 |Part 2: Exploratory Data Analysis|Conduct EDA using Python libraries (plotly, seaborn, matplotlib etc.). Provide a PowerPoint Report with graphs and key insights|
-|------|------|
 |Part 3: Feature Engineering|Conduct thorough feature analysis and use pre-processing techniques to make the data usable|
-|------|------|
-|------|------|
-|------|------|
-|------|------|
-|------|------|
-|------|------|
-|------|------|
-|------|------|
-|------|------|
-|------|------|
-|------|------|
-|------|------|
-|------|------|
-|------|------|
+|Part 4: Prediction Algorithms|Try Linear Regression, Random Forest, Neural Networks to build prediction models in using sklearn in Pyhthon. Compute RMS, MAPE, R2 and MAE for Training and Testing Datasets. Recommend a model.|
+|Part 5: Feature Selection|Understand the importance of the various features and how the features influence the output. Explore tpot, featuretools, Boruta, tsfresh.|
+|Part 6: Model Validation and Selection|Understand hyperparameter tuning and model validation prior to model selection for production.|
+|Part 7: Final Pipeline|Recommend a Final Model with reason. Automate the entire model from Data Ingestion to Final Model Prediction.|
+|Part 8: Report & Model Development Methodology|Put together a comprehensive report discussing analysis in pdf.|
+
+## INFO
+
+1) Language used : Python
+2) Process Followed : Data Ingestion, Data Wrangling, Data Cleansing, Exploratory Data Analysis
+3) Tools used : Jupyter Notebook
+
+##The library list
+The library requirement list is written in the requirements.txt file for easy execution
+
+##For further Details please refer the Assignment2_Documentation.pdf file
 
