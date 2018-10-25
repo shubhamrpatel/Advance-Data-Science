@@ -1,8 +1,7 @@
-# Assignment 3
-AdaptiveAlgo Systems Inc. has invited you to be partners in helping them implement data science solutions. Your company was selected after rigorous review and is held in high esteem for the quality data science solutions you have been developing. However, the AdaptiveAlgo is concerned if your team of three can deliver high performance solutions in a timely manner. Note that AdaptiveAlgo wants to make a decision on which team they want to partner with based on the deliverable you submit by April 13th 11.59pm. They have pre-selected datasets that are here: https://docs.google.com/spreadsheets/d/1n_bHTkz6G76rgH1Vhu_065ZWEP2a8DVND6tk8Pz6WcM/edit?usp=sharing and will be made available through Amazon S3. Since AdaptiveAlgo has all solutions on the cloud, you should also implement all solutions on the cloud. You have a choice of cloud.  Here are the requirements:
+# Bankruptcy Prediction of Polish Companies
 
 ## Part1: Model design and building 
-1. The dataset is on Amazon S3. Access the data assigned to you from S3 
+1. The dataset is on Amazon S3. Access the data assigned to us from S3 
 2. You should build a pipeline using Luigi/Airflow/Sklearn (See the google link for your team’s allocated method. This pipeline incorporates:
   1. Data ingestion into Pandas 
   2. Cleanup the Data if needed 
