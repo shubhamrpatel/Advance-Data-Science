@@ -9,10 +9,6 @@ This is the final project of INFO7390. The topic is Insurance Premium Prediction
 - Accurately predict the insurance premium cost for a person knowing all the factors (like smoker or not, no. of children, regin, etc.)
 
 
-### The dataset can be found on:
-https://www.kaggle.com/mirichoi0218/insurance/data
-
-
 ### The dataset consists of:
 #### Columns -
 - age: age of primary beneficiary
