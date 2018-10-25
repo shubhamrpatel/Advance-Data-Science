@@ -17,11 +17,11 @@ Build a docker image that can automate this task for any CIK and document access
 
 Analyze the EDGAR Log File Data Set [https://www.sec.gov/data/edgar-log-filedata-set.html]. The page lists the meta data for the datasets and you are expected to develop a pipeline which does the following. Given a year, your program (In R or Python) should get data for the first day of the month(programmatically generate the url http://www.sec.gov/dera/data/PublicEDGAR-log-file-data/2003/Qtr1/log20030101.zip for Jan 2003 for example ) for every month in the year and process the file for the following:
 
-Handle	missing	data <br>
-Compute	summary	metrics	(Decide	which	ones) <br>
-Check	for	any	observable	anomalies <br>
-Your	program	should	log	all	the	operations	(with	time	stamps)	into	a	log	file <br>
-Compile	all	the	data	and	summaries	of	the	12	files	into	one	file <br>
-Upload	this	compiled	data	file	and	the	log	file	you	generated	to	your	Amazon	S3	bucket	(Google on	R/Python	packages to	use	for	this. The code should work for any year on the page. You should create a Docker image which runs the pipeline.
+•Handle	missing	data <br>
+•Compute	summary	metrics	(Decide	which	ones) <br>
+•Check	for	any	observable	anomalies <br>
+•Your	program	should	log	all	the	operations	(with	time	stamps)	into	a	log	file <br>
+•Compile	all	the	data	and	summaries	of	the	12	files	into	one	file <br>
+•Upload	this	compiled	data	file	and	the	log	file	you	generated	to	your	Amazon	S3	bucket	(Google on	R/Python	packages to	use	for	this. The code should work for any year on the page. You should create a Docker image which runs the pipeline.
 
 ## For detail description of python notebooks refer the Assignment1.pdf
