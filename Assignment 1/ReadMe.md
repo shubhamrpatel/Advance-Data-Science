@@ -23,3 +23,5 @@ Check	for	any	observable	anomalies <br>
 Your	program	should	log	all	the	operations	(with	time	stamps)	into	a	log	file <br>
 Compile	all	the	data	and	summaries	of	the	12	files	into	one	file <br>
 Upload	this	compiled	data	file	and	the	log	file	you	generated	to	your	Amazon	S3	bucket	(Google on	R/Python	packages to	use	for	this. The code should work for any year on the page. You should create a Docker image which runs the pipeline.
+
+## For detail description of python notebooks refer the Assignment1.pdf
