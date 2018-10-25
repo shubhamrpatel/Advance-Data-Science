@@ -22,8 +22,5 @@ The assignment is divided into 8 Parts.
 2) Process Followed : Data Ingestion, Data Wrangling, Data Cleansing, Exploratory Data Analysis
 3) Tools used : Jupyter Notebook
 
-## The library list
-The library requirement list is written in the requirements.txt file for easy execution
-
 ## For further Details please refer the Assignment2.pdf file
 
